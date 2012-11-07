@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" minWidth="955" minHeight="600" creationComplete="init()">
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.controls.Button;
+
+			public function init():void{
+				var btn:Button = new Button();
+				
+				btn.addEventListener(MouseEvent.CLICK, showAlert);
+				container.addChild(btn);
+			}
+			
+			private function showAlert(event:Event):void{
+				Alert.show("CLICK!!!");
+			}
+		]]>
+	</mx:Script>
+	
+	<mx:HBox id="container">
+		
+	</mx:HBox>
+</mx:Application>
